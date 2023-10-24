@@ -5,6 +5,8 @@ export default function Cabecalho() {
     <header className='cabecalho'>
     <nav>
       <Link href="/">HOME</Link>
+      <Link href="/git-users">USERS</Link>
+      <Link href="/add-prod">ADD-PROD</Link>
       <Link href="/produtos/mamao" >MAMÃO</Link>
       <Link href="/produtos/melao" >MELÃO</Link>
       <Link href="/produtos/manga" >MANGA</Link>

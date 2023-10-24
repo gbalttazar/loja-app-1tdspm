@@ -1,11 +1,8 @@
 
 export default async function ProdutoID({params}) {
 
-  const response = await fetch("http://localhost:3000/dados/produto-api");
-  const produtos = await response.json();
-
-  const produto = produtos.find(produto => produto.id == params.id);
-
+  const response = await fetch(`http://localhost:3000/dados/produto-api/${params.id}`);
+  const produto = await response.json();
 
   return (
     <div>

@@ -13,6 +13,17 @@
         }
     }
   }
+
+  .formProd{
+    @apply flex flex-col justify-center items-center;
+    & input{
+      @apply border-2 border-gray-700 rounded-md p-2 m-2;
+    }
+    & button{
+      @apply bg-gray-700 text-white rounded-md p-2 m-2;
+    }
+  }
+
 }
 
 
