@@ -1,7 +1,13 @@
 export default async function DadosJson() {
-    
+        let produtos;
         const response = await fetch("http://localhost:3000/base/base-api");
-        const produtos = await response.json();
+        try {
+            produtos = await response.json();
+            console.log(produtos);
+        }
+        catch (error) {
+            console.log(error);
+        }
 
     return (
         <div>

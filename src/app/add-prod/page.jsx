@@ -8,6 +8,7 @@ export default function AddProduto() {
     nome: "",
     tipo: "",
     desc: "",
+    img:"",
   });
 
   const handleChange = (e) => {
@@ -49,6 +50,11 @@ export default function AddProduto() {
             <div>
               <label htmlFor="desc">Descrição:</label>
               <textarea id="desc" name="desc" value={produto.desc} onChange={handleChange}></textarea>
+            </div>
+            <div>
+              {/*Adicionar um campo para adicionar uma imagem da máquina do usuário*/}
+              <label htmlFor="img">Imagem:</label>
+              <input type="file" id="img" name="img" value={produto.img} onChange={handleChange}/>
             </div>
             <div>
               <button>Enviar</button>

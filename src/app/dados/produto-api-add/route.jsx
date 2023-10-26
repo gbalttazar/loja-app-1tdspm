@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
 //Recuperando os dados do Formulário
-  const { nome, tipo, desc } = await request.json();
+  const { nome, tipo, desc,img } = await request.json();
 
 //Recuperando os dados do arquivo JSON em /app/base/db.json;
   const file = await fs.readFile(process.cwd() + '/src/app/base/db.json', 'utf8');
@@ -15,6 +15,7 @@ export async function POST(request) {
     nome,
     tipo,
     desc,
+    img,
   };
 
 //Adicionando o novo produto ao arquivo JSON em /app/base/db.json;
